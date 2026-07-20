@@ -1,7 +1,7 @@
 use clap::Parser;
 use color_eyre::Report;
 use iocore::Path;
-use toml::Value;
+use tomlfmt::prettify_file;
 
 #[derive(Parser)]
 #[command(version, about, long_about = "simple toml prettifier")]
