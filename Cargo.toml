@@ -2,25 +2,38 @@
 name = "tomlfmt"
 version = "0.1.0"
 edition = "2024"
-
-description = """tomlfmt is a simple toml prettifier"""
-
+description = "tomlfmt is a simple toml prettifier"
 documentation = "https://docs.rs/tomlfmt"
 readme = "README.md"
 repository = "https://github.com/gabrielfalcao/tomlfmt"
 homepage = "https://github.com/gabrielfalcao/tomlfmt"
 license = "MIT OR Apache-2.0"
-
-keywords = ["toml", "prettifier", "formatter"]
+keywords = [
+    "toml",
+    "prettifier",
+    "formatter",
+]
 authors = ["Gabriel DeMoura <gabrielteratos@gmail.com>"]
-categories = ["command-line-interface", "command-line-utilities", "development-tools", "encoding", "parser-implementations"]
+categories = [
+    "command-line-interface",
+    "command-line-utilities",
+    "development-tools",
+    "encoding",
+    "parser-implementations",
+]
 
 [dependencies]
-clap = { version = "4.6.3", features = ["derive", "env"] }
 color-eyre = "0.6.5"
 iocore = "3.1.0"
-# pest_derive = "2.8.7"
-# pest_grammars = "2.8.7"
 thiserror = "2.0.19"
-toml = { version = "1.1.3", features = ["preserve_order"] }
-# toml_edit = { version = "0.25.13", features = ["serde"] }
+
+[dependencies.clap]
+version = "4.6.3"
+features = [
+    "derive",
+    "env",
+]
+
+[dependencies.toml]
+version = "1.1.3"
+features = ["preserve_order"]
