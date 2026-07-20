@@ -2,7 +2,7 @@
 name = "tomlfmt"
 version = "0.1.0"
 edition = "2024"
-description = "tomlfmt is a simple toml prettifier"
+description = "tomlfmt is a simple and fast toml prettifier"
 documentation = "https://docs.rs/tomlfmt"
 readme = "README.md"
 repository = "https://github.com/gabrielfalcao/tomlfmt"

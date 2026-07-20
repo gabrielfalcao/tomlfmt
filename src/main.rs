@@ -4,7 +4,7 @@ use iocore::Path;
 use tomlfmt::prettify_file;
 
 #[derive(Parser)]
-#[command(version, about, long_about = "simple toml prettifier")]
+#[command(version, about, long_about = "simple and fast toml prettifier")]
 struct Cli {
     #[arg(required = true, help = "list of toml paths to prettify")]
     paths: Vec<Path>,
