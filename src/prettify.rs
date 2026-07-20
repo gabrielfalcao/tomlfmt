@@ -9,7 +9,7 @@ pub fn prettify_file(path: &Path, write_in_place: bool) -> Result<()> {
     if source != prettified {
         if write_in_place {
             path.write(prettified.as_bytes())?;
-            eprintln!("write prettified {path}");
+            eprintln!("wrote prettified {path}");
         } else {
             println!("{prettified}")
         }
