@@ -1,4 +1,4 @@
-use crate::{Error, Result};
+use crate::Result;
 use iocore::Path;
 use toml::Value;
 
