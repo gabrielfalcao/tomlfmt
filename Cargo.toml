@@ -21,10 +21,23 @@ categories = [
     "encoding",
     "parser-implementations",
 ]
+default-run =  "tomlfmt-parser"
+
+[[bin]]
+name = "tomlfmt"
+path = "src/bin/simple.rs"
+
+[[bin]]
+name = "tomlfmt-parser"
+path = "src/bin/parser.rs"
 
 [dependencies]
 color-eyre = "0.6.5"
+couleur-rs = "0.0.5"
 iocore = "3.1.0"
+pest = "2.8.7"
+pest_derive = "2.8.7"
+pest_grammars = "2.8.7"
 thiserror = "2.0.19"
 
 [dependencies.clap]

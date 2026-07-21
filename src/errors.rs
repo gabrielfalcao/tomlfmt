@@ -1,4 +1,5 @@
 use thiserror::Error as ThisError;
+use crate::parser::toml::Rule;
 
 #[derive(ThisError, Debug)]
 pub enum Error {
@@ -10,6 +11,8 @@ pub enum Error {
     IOCoreError(#[from] iocore::Error),
     #[error("I/O Error {0}")]
     IOError(#[from] std::io::Error),
+    #[error("Parse error {0}")]
+    ParseError(#[from] pest::error::Error<Rule>),
 
 }
 pub type Result<T> = std::result::Result<T, color_eyre::Report>;
